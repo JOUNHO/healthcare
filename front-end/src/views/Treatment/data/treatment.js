@@ -15,7 +15,7 @@ const treatment = [
   {treatment_id: 14 , patient_id: 6, treatment_sympton: "몸이 뜨거워요", treatment_record: "고열 증사응로 내원", treatment_comment: "특이사항 없음", treatment_date: "2021-06-13", treatment_saved: 1},
   {treatment_id: 15 , patient_id: 7, treatment_sympton: "어지럽고 추워요", treatment_record: "상기환자 몸살 기운으로 내원", treatment_comment: "특이사항 없음", treatment_date: "2021-06-14", treatment_saved: 1},
   {treatment_id: 16 , patient_id: 8, treatment_sympton: "어지러워요", treatment_record: "어지러움 호소", treatment_comment: "특이사항 없음", treatment_date: "2021-06-15", treatment_saved: 1},
-  {treatment_id: 17 , patient_id: 1,  treatment_sympton: "감기증상이 있어요", treatment_date: "2021-06-29", treatment_saved: 0}
+  {treatment_id: 17 , patient_id: 1,  treatment_sympton: "감기증상이 있어요", treatment_date: "2021-06-30", treatment_saved: 0}
 ]
 
 export default treatment;
