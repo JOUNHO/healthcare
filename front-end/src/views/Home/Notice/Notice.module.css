@@ -95,7 +95,7 @@
 }
 
 .notice_items {
-  height: 300px;
+  height: 280px;
   overflow: auto;
 }
 
@@ -129,7 +129,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 200px;
+  width: 190px;
   height: 40px;
   font-size: 15px;
   font-weight: 600;
@@ -145,5 +145,5 @@
   font-size: 15px;
   font-weight: 600;
   padding: 10px;
-  padding-left: 60px;
+  padding-left: 100px;
 }

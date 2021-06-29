@@ -1,0 +1,37 @@
+.spinner_wrapper {
+  margin-top: 200px;
+}
+
+.news_wrapper {
+  height: 100%;
+}
+
+.search_wrapper {
+  margin-left: 500px;
+  width: 500px;
+}
+
+.icon_wrapper {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.news_list_wrapper {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  height: 320px;
+  overflow: auto;
+}

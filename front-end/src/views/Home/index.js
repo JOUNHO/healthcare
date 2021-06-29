@@ -2,6 +2,7 @@ import styles from "./index.module.css"
 import Login from "./Login";
 import Notice from "./Notice";
 import Poster from "./Poster";
+import News from "./News";
 
 function Home(props) {
   return (
@@ -14,7 +15,7 @@ function Home(props) {
           <Notice />
         </div>
         <div className={styles.poster_area}>
-          <Poster />
+          <News />
         </div>
       </div>
     </div>

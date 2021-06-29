@@ -45,7 +45,7 @@ function Notice(props) {
           <Fragment key={notice.dz_notice_no}><div className={styles.rows} onClick={() => openModal(notice.dz_notice_no)}>
             <div className={styles.notice_no_item}><span >{index+1}</span></div>
             <div className={styles.notice_title_item}><span >{notice.dz_notice_title}</span></div>
-          {notice.dz_notice_date === "2021-06-26" ? 
+          {notice.dz_notice_date === "2021-06-30" ? 
             (<div className={styles.notice_badge}><span className={`${styles.notice_badge_item} badge badge-primary`}>new</span></div>) 
             : 
             (<div className={styles.notice_badge}><span ></span></div>)}
