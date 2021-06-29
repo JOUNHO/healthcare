@@ -24,8 +24,8 @@ function News(props) {
               sort: "sim"
             },
             headers: {
-              'X-Naver-Client-Id': "asWjwvRSUMfaF1P9bquX",
-              'X-Naver-Client-Secret': "gek1Jugkdj"
+              'X-Naver-Client-Id': process.env.REACT_APP_X_Naver_Client_Id,
+              'X-Naver-Client-Secret': process.env.REACT_APP_X_Naver_Client_Secret
             }
           }
         );

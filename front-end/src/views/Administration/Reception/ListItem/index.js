@@ -35,17 +35,17 @@ function ListItem(props) {
         </span>
         {
           { 
-            대기 : (<select style={{color: "#74b816"}} value={state} onChange={(event) =>handleStateChange(event, reception.patient_id)}>
+            대기 : (<select className={styles.select_box} style={{color: "#74b816"}} value={state} onChange={(event) =>handleStateChange(event, reception.patient_id)}>
                       <option style={{color: "#74b816"}} value="대기">대기</option>
                       <option style={{color: "#1c7ed6"}} value="완료">완료</option>
                       <option style={{color: "#f03e3e"}} value="진료">진료</option>
                     </select>),
-            진료 : (<select style={{color: "#f03e3e"}} value={state} onChange={(event) =>handleStateChange(event, reception.patient_id)}>
+            진료 : (<select className={styles.select_box} style={{color: "#f03e3e"}} value={state} onChange={(event) =>handleStateChange(event, reception.patient_id)}>
                       <option style={{color: "#74b816"}} value="대기">대기</option>
                       <option style={{color: "#1c7ed6"}} value="완료">완료</option>
                       <option style={{color: "#f03e3e"}} value="진료">진료</option>
                     </select>),
-            완료 : (<select style={{color: "#1c7ed6"}} value={state} onChange={(event) =>handleStateChange(event, reception.patient_id)}>
+            완료 : (<select className={styles.select_box} style={{color: "#1c7ed6"}} value={state} onChange={(event) =>handleStateChange(event, reception.patient_id)}>
                       <option style={{color: "#74b816"}} value="대기">대기</option>
                       <option style={{color: "#1c7ed6"}} value="완료">완료</option>
                       <option style={{color: "#f03e3e"}} value="진료">진료</option>

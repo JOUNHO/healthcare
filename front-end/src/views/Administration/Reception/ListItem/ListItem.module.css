@@ -1,5 +1,5 @@
 .appointmentItem {
-  width: 100px;
+  width: 90px;
   height: 40px;
   text-align: center;
   line-height: 40px;
@@ -8,4 +8,8 @@
 
 .appointmentRow:hover {
   background-color:#edf2ff;
+}
+
+.select_box {
+  margin-left: 17px;
 }
