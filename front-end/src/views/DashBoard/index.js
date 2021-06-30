@@ -16,9 +16,11 @@ function DashBoard(props) {
       <div className={styles.top_contain}>
         <ImgNotice></ImgNotice>
         <Calendar startDate={startDate} changeDate={changeDate}></Calendar>
+        
       </div>
 
       <div className={styles.bottom_contain}>
+        
         <Notice></Notice>
         <FreeBoard></FreeBoard>
         <Weather></Weather>

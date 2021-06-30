@@ -22,12 +22,22 @@ function Staff(props) {
         return(
           <div key={index} className={styles.staff_body}>
             <div className={styles.staff_name}>
-              <div className={styles.staff_img}>
+              <div 
+              className={styles.staff_img}
+              >
                 <img src={data.img} className={styles.staff_img_img}></img>
               </div>
                 <span>{data.staff_name}</span>
             </div>
-            <div><div className={styles.authority}>{data.staff_authority}</div></div>
+            <div>
+              <div className={
+                              data.staff_authority === "의사" ? 
+                                `${styles.authority} ${styles.doctor_bg}` 
+                                : 
+                                (data.staff_authority === "간호사" ? `${styles.authority} ${styles.nurse_bg}` : `${styles.authority} ${styles.clinic_bg}`)
+                              }
+              >{data.staff_authority}</div>
+            </div>
             <div className={styles.tel}>{data.staff_tel}</div>
           </div>
         );

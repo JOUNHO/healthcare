@@ -1,8 +1,16 @@
+import { useEffect, useRef } from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./index.module.css";
 function NoticeModal(props) {
   const {showNoticeModal,closeNoticeModal,noticeItem} = props;
-  console.log(noticeItem);
+  
+  const divRef = useRef();
+  useEffect(() => {
+    if(showNoticeModal){
+      divRef.current.innerHTML=noticeItem.notice_content;
+    }
+  }, [showNoticeModal])
+
   return(
     <>
     {
@@ -20,16 +28,7 @@ function NoticeModal(props) {
             <div className={styles.notice_title}>{noticeItem.notice_title}</div>
             <div className={styles.notice_content}>
             <div className={styles.notice_date}>작성일 : {noticeItem.notice_date}</div>
-            <div>
-              {(noticeItem.notice_content).split("\n").map((text) =>{
-                return (
-                  <>
-                    {text}
-                    <br/>
-                  </>
-                )
-              })}
-            </div>
+            <div ref={divRef}></div>
            
             </div>
           </Modal.Body>

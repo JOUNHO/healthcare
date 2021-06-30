@@ -19,7 +19,7 @@ function ImgNoticeModal(props) {
             <div className={styles.img_notice_title}>{imgNoticeItem.img_notice_title}</div>
             <div className={styles.img_notice_content}>
               <div className={styles.img_notice_date}>작성일 : {imgNoticeItem.img_notice_date}</div>
-              <div><img src={imgNoticeItem.img_notice_img} height="200"/></div>     
+              {/* <div><img src={imgNoticeItem.img_notice_img} height="200"/></div>      */}
               <div>
               {(imgNoticeItem.img_notice_content).split("\n").map((text) =>{
                 return (

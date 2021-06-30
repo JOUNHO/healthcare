@@ -125,7 +125,6 @@ function TimeTable(props) {
     console.log(i);
     let start;
     if(i===btnNum-1 && ((Object.keys(tAppointment[0]).length)%4)!==0){
-      console.log("들어옴");
       let remainNum=(Object.keys(tAppointment[0]).length)%4;
       start=i*4-(4-remainNum);
       console.log(start);

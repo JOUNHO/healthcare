@@ -9,6 +9,7 @@ function Notice(props) {
   const [showNoticeModal,setShowNoticeModal] = useState(false);
   const [noticeItem,setNoticeItem] = useState(null);
   const openNoticeModal = (data) => {
+    console.log(noticeItem);
     setNoticeItem(data);
     setShowNoticeModal(true);
   }

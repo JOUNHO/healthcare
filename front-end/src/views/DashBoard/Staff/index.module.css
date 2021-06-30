@@ -85,7 +85,6 @@
 }
 .authority{
   border-radius: 20px;
-  background-color: #e67700;
   width: 50px;
   height: 30px;
   padding-top: 5px;
@@ -94,6 +93,15 @@
   font-weight: 300;
   margin-top: 5px;
   margin-left: 20px;
+}
+.doctor_bg{
+  background-color: #f39e01ec;
+}
+.nurse_bg{
+  background-color: #326305ec;
+}
+.clinic_bg{
+  background-color: #853aa8ec;
 }
 .tel{
   padding-top: 5px;

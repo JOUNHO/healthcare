@@ -1,4 +1,3 @@
-import TodayAppointment from "./TodayAppointment/index.";
 import "./index.css"
 import Calendar from "./Calendar";
 import TimeTable from "./TimeTable";

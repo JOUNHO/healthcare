@@ -53,3 +53,6 @@ code {
   url("styles/fonts/NotoSansKR-Bold.woff") format('woff'),
   url("styles/fonts/NotoSansKR-Bold.otf") format('truetype')
 }
+body p{
+  margin-bottom: 0px;
+}

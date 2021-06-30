@@ -35,7 +35,6 @@ function Weather(props) {
   useEffect(() => {
     work();
   },[])
-  console.log(hourlyWeather);
 
 
 
@@ -44,10 +43,10 @@ function Weather(props) {
       <div className={`${styles.Weather_header} d-flex justify-content-between`}>
         <div>
           <i class="fas fa-bullhorn"></i>
-          <span>날씨정보</span>
+          <span className={styles.info}>날씨정보</span>
         </div>
 
-        <button onClick={work} class={styles.refresh}><i class="fas fa-redo-alt"></i></button>
+        <button onClick={work} className={styles.refresh}><i class="fas fa-redo-alt"></i></button>
       
       </div>
       <CurrentWeather weather={weather}></CurrentWeather>
