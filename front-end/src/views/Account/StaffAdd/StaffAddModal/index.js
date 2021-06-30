@@ -26,13 +26,14 @@ function StaffAddModal(props) {
     setAccount({...account, staff_authority});
   }
 
-  const inputFile = useRef();
-
+  
   /**
    * 직원을 추가한다. 
    * 
    * TODO : axios 요청 api 작성"
    */
+
+  const inputFile = useRef();
 
   const handleAdd = async(evnet) => {
     evnet.preventDefault();

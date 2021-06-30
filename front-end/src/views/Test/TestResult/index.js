@@ -51,7 +51,7 @@ function TestResult(props){
   }
 
   /**
-   * 저장버튼 클릭스 현재 상태를 저장한다.
+   * 저장버튼 클릭시 현재 상태를 저장한다.
    * 
    * TODO : testList 를 DB에 업데이트하는 api 작성
    * testResults 상태변수에는 각 상세검서와 입력한 결과값이 저장되어 있음
@@ -62,7 +62,6 @@ function TestResult(props){
     setIsSaved(true);
   }
   
-
   return(
     <div className={style.testResult}>
       <div>

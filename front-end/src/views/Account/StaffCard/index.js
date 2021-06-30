@@ -26,12 +26,12 @@ function StaffCard(props){
           const response = await downloadAttach(staff.staff_id);
           setImgSrc(URL.createObjectURL(response.data)); 
         } catch(error){
-          console.log(error);
+          //
         }
       };
       work();   
     }
-  },[]); 
+  },[staff]); 
 
   return(
     <div className={style.staffcard}>

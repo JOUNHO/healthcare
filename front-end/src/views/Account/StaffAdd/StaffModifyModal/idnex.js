@@ -21,10 +21,6 @@ function StaffModifyModal(props){
     }
   },[staff])
 
-  useEffect(()=>{
-    console.log(newAccount);
-  },[newAccount])
-
   const handleChange = (event) => {
     setNewAccount({ ...newAccount,
     [event.target.name]: event.target.value});

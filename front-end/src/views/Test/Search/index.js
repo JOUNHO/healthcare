@@ -10,6 +10,14 @@ function Search(props){
     setTestListId(event.target.value);
   }
 
+  /**
+  * 검사결과를 입력하기 위한 검사번호 검색창
+  * 검사번호가 유효한지 확인하고, 유효하면,
+  * 부모 컴포넌트의 검사번호를 프롭으로 전달받은 함수를 통해 변경한다. 
+  * 
+  * TODO : 검사번호로 test_lists 테이블에서 유효한(존재하는)검사번호 인지만 확인
+  */
+
   const searchTestListId = () => {
     const testLists = testListData;
     const isValid = testLists.filter((item)=>item.test_list_id == testListId);

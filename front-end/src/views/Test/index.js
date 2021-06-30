@@ -36,7 +36,7 @@ function Test(props){
   *
   * TODO : api 요청시 setPatient에 전달되는 파라미터를 새롭게 작성해야 함. 
   *        test_list_id 로 환자객체를 요청한다.
-  *        반환 형태는 {"patientId":"","name":"", "gender":"","birth":"","age":"","tel": "","recentVisit": "", "medicine": "", "disease": "", "comment": ""}}
+  *        반환 형태는 {"patient_id":"","patient_name":"", "patient_gender":"","patient_birth":"","patient_age":"","patient_tel": "","recentVisit": "", "patient_medicine": "", "patient_disease": "", "patient_comment": ""}}
   *        반환된 objecet를 setPatient의 파라미터로 전달
   */
 

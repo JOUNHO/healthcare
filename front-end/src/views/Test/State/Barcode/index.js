@@ -11,6 +11,11 @@ function Barcode(props){
 
   let testList = props.testList;
 
+  /**
+   * 프롭으로 전달받은 검사번호로 바코드 생성
+   * jsBarcode 외부 라이브러리 이용 
+   * base64 바이너리 데이터가 imageUrl에 업데이트
+   */
   useEffect(() => {
     const canvas = document.createElement('canvas')
     JsBarcode(canvas, testList, { height: 100, displayValue: true })

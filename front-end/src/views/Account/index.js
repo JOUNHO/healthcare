@@ -35,7 +35,7 @@ function Account(props){
    */
 
   const getStaff = () => {
-    const staff = staffs.filter((item)=> item.staff_id == staffId);
+    const staff = staffs.filter((item)=> item.staff_id === staffId);
     return staff;
   }
 
