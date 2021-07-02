@@ -8,14 +8,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Notice(props) {
 
   const staticNoticeList = getNoticeList();
-  const [noticeList, setNoticeList] = useState([]);
+  staticNoticeList.sort((a, b) => b.dz_notice_no - a.dz_notice_no);
+  
   const [isOpen, setIsOpen] = useState(false);
   const [selectedNo, setSelectedNo] = useState(-1);
-
-  useEffect(()=>{
-    staticNoticeList.sort((a, b) => b.dz_notice_no - a.dz_notice_no);
-    setNoticeList(staticNoticeList);
-  },[]);
 
   const openModal = (noticeNo) => {
     setIsOpen(true);
@@ -41,7 +37,7 @@ function Notice(props) {
         </div>
       </div>
       <div className={styles.notice_items}>
-        {noticeList.map((notice, index) => (
+        {staticNoticeList.map((notice, index) => (
           <Fragment key={notice.dz_notice_no}><div className={styles.rows} onClick={() => openModal(notice.dz_notice_no)}>
             <div className={styles.notice_no_item}><span >{index+1}</span></div>
             <div className={styles.notice_title_item}><span >{notice.dz_notice_title}</span></div>

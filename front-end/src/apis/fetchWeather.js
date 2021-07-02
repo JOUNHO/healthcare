@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const URL = "https://api.openweathermap.org/data/2.5/forecast";
-//https://api.openweathermap.org/data/2.5/weather?lat=37.495987&lon=127.124378&units=metric&appid=dedffece273156f7df9766be92104c7b
+//https://api.openweathermap.org/data/2.5/weather?lat=37.495987&lon=127.124378&units=metric&appid=
 const URL = "https://api.openweathermap.org/data/2.5/weather";
 const H_URL = "https://api.openweathermap.org/data/2.5/forecast";
 

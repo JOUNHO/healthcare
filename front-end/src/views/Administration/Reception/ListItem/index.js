@@ -1,11 +1,16 @@
 import styles from "./ListItem.module.css";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import moment from "moment";
 
 function ListItem(props) {
   
   const {index, reception, selectPatient, finished} = props;
   const [state, setState] = useState("대기");
+  const [receptionTime, setReceptionTime] = useState("");
+  useEffect(() => {
+    const time = moment().format("HH:mm");
+    setReceptionTime(time);
+  },[]);
 
   const handleStateChange = (event, patientId) => {
     setState(event.target.value);
@@ -22,7 +27,7 @@ function ListItem(props) {
         {index+1}
         </span>
         <span className={styles.appointmentItem}>
-        {moment().format('HH:mm')}
+        {receptionTime}
         </span>
         <span className={styles.appointmentItem}>
         {reception.patient_name}

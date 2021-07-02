@@ -1,11 +1,10 @@
-import "./index.css"
 import Calendar from "./Calendar";
 import TimeTable from "./TimeTable";
 import { useEffect, useState } from "react";
 import { getTAppoint, getTestAppointment } from "./TimeTable/data/data";
 import SearchPatient from "./SearchPatient";
 import Info from "./Info";
-
+import styles from "./index.module.css";
 function Appointment(props) {
 
   const [startDate, setStartDate] = useState(new Date());
@@ -32,7 +31,7 @@ function Appointment(props) {
   
 
   return(
-    <div className="contain">
+    <div className={styles.contain}>
       <div>
         <Calendar startDate={startDate} changeDate={changeDate}></Calendar>
         <SearchPatient selectedPatientId={selectedPatientId}></SearchPatient>

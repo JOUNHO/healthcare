@@ -27,9 +27,8 @@ function NoticeModal(props) {
           <Modal.Body>
             <div className={styles.notice_title}>{noticeItem.notice_title}</div>
             <div className={styles.notice_content}>
-            <div className={styles.notice_date}>작성일 : {noticeItem.notice_date}</div>
-            <div ref={divRef}></div>
-           
+              <div className={styles.notice_date}>작성일 : {noticeItem.notice_date}</div>
+              <div ref={divRef}></div>
             </div>
           </Modal.Body>
           <Modal.Footer>

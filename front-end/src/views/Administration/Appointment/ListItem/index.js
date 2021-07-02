@@ -3,22 +3,13 @@ import {useEffect, useState} from "react";
 
 function ListItem(props) {
 
-  const {index, appointment, selectPatient, receptionPatient, appointmentTest, isFinished, setAppointmentState} = props;
+  const {index, appointment, selectPatient, receptionPatient, appointmentTest, isFinished} = props;
   const [state, setState] = useState("예약");
-  const [list, setList] = useState([]);
-  
-  // useEffect(() => {
-  //   const temp = {...appointment, appointmentState: state};
-  //   async function ex() {
-  //     await setAppointmentState(temp);
-  //   }
-  //   ex();
-  // },[state]);
 
-  useEffect(() => {
-    const temp = {...appointment, appointment_state: state};
-    setAppointmentState(temp);
-  },[state])
+  // useEffect(() => {
+  //   const temp = {...appointment, appointment_state: state};
+  //   setAppointmentState(temp);
+  // },[state])
 
   useEffect(() => {
     if(appointment.patient_id === isFinished) {
@@ -29,10 +20,10 @@ function ListItem(props) {
   const handleStateChange = (event, appointment_id, appointment_kind) => {
     setState(event.target.value);
     if(event.target.value === "내원" && appointment_kind === "진료") {
-      //접수 테이블 추가
+      //접수 컴포넌트에 추가
       receptionPatient(appointment_id);    //appointment_id를 보내야함
     } else if(event.target.value === "내원" && appointment_kind === "검사") {
-      //검사 테이블 추가
+      //검사 컴포넌트에 추가
       appointmentTest(appointment_id);
     }
   };

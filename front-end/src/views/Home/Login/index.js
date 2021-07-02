@@ -22,7 +22,7 @@ function Login({history}){
           <input className={`form-control ${style.staffPwd}`} type="password" placeholder="user password"></input>
         </div>
         <div className={style.loginButtonArea}>
-          <Link to="/Dashboard"><button className={style.appoint_btn}>
+          <Link to="/dashboard"><button className={style.appoint_btn}>
             Login
           </button></Link>
         </div>

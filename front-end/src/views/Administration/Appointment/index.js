@@ -15,17 +15,17 @@ function Appointment(props) {
   const todayAppointmentList = staticAppointmentList.filter(today => today.appointment_date === "2021-06-16");  //후에 백엔드에서 처리할 예정
   const [appointmentList, setAppointmentList] = useState(todayAppointmentList);
 
-  const [stateList, setStateList] = useState([]);
-  let newList = stateList;
-  const setAppointmentState = (list) => {
-    newList = newList.filter(temp => temp.patient_id !== list.patient_id);
-    newList = newList.concat(list);
-    setStateList(newList);
-  };
+  // const [stateList, setStateList] = useState([]);
+  // let newList = stateList;
+  // const setAppointmentState = (list) => {
+  //   newList = newList.filter(temp => temp.patient_id !== list.patient_id);
+  //   newList = newList.concat(list);
+  //   setStateList(newList);
+  // };
 
-  useEffect(() => {
-    console.log("!!!!!!!!!!!!!!!",stateList);
-  },[stateList])
+  // useEffect(() => {
+  //   console.log("!!!!!!!!!!!!!!!",stateList);
+  // },[stateList])
 
   const listAll = () => {   //전체 클릭시 예약 리스트 상태를 다시 당일 예약 리스트로 세팅
     setAppointmentList(todayAppointmentList);
@@ -78,7 +78,7 @@ function Appointment(props) {
     </div>
     <div className={styles.appointment_content}>
       {appointmentList.map((appointment, index)=>(
-        <ListItem key={index} index={index} appointment={appointment} selectPatient={selectPatient} receptionPatient={receptionPatient} appointmentTest={appointmentTest} isFinished={isFinished} setAppointmentState={setAppointmentState}/>
+        <ListItem key={index} index={index} appointment={appointment} selectPatient={selectPatient} receptionPatient={receptionPatient} appointmentTest={appointmentTest} isFinished={isFinished}/>
       ))}
     </div>
  </div>

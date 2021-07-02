@@ -4,6 +4,7 @@ import 'react-quill/dist/quill.snow.css';
 import styles from "./index.module.css";
 import "./index.css";
 import NoticeModal from '../DashBoard/Modal/NoticeModal';
+import moment from 'moment';
 function WriteNotice(props) {
 
   const [text, setText] = useState("");
@@ -30,7 +31,7 @@ function WriteNotice(props) {
     let jsonData=new Object();
     jsonData.notice_title=title;
     jsonData.notice_content=text;
-    jsonData.notice_date="2021-06-30";
+    jsonData.notice_date=moment().format("YYYY-MM-DD");;
     setNoticeItem(jsonData);
     openNoticeModal();
   }

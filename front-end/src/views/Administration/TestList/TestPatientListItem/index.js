@@ -1,11 +1,16 @@
 import moment from "moment";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./TestPatientListItem.module.css";
 
 function TestPatientListItem(props) {
 
   const {index, testPatient, showTestList} = props;
   const [state, setState] = useState("대기");
+  const [receptionTime, setReceptionTime] = useState("");
+  useEffect(() => {
+    const time = moment().format("HH:mm");
+    setReceptionTime(time);
+  },[]);
 
   return (
     <div key={index} onClick={()=> showTestList(testPatient.test_list_id,  testPatient.patient_id)} className={`border-bottom d-flex ${styles.patient_row}`}>
@@ -13,7 +18,7 @@ function TestPatientListItem(props) {
         {index+1}
       </span>
       <span className={styles.test_patient_item}>
-        {moment().format("HH:mm")}
+        {receptionTime}
       </span>
       <span className={styles.test_patient_item}>
         {testPatient.patient_name}

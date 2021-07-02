@@ -1,18 +1,28 @@
+import moment from "moment";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { getFreeBoardAnswer } from "../../data";
 import styles from "./index.module.css";
 function FreeBoardModal(props) {
   const {showFreeBoardModal, closeFreeBoardModal, freeBoardItem} = props;
-  const [freeBoardAnswer,setFreeBoardAnswer] =useState(getFreeBoardAnswer());
+  const [freeBoardAnswer,setFreeBoardAnswer] =useState(getFreeBoardAnswer);
 
   const [answer,setAnswer] = useState("");
-  console.log(freeBoardAnswer);
 
   const changeText = (e) => {
     setAnswer(e.target.value)
   }
   const addAnswer = () => {
+    const newAnswerList=freeBoardAnswer.concat([
+      {
+        "freeboard_answer_content":answer,
+        "freeboard_answer_date":moment().format('YYYY-MM-DD'),
+        "freeboard_answer_time": moment().format('HH:mm'),
+        "staff_name":"로그인Id"
+      }
+    ]
+    )
+    setFreeBoardAnswer(newAnswerList);
     setAnswer("");
   }
   return(

@@ -10,7 +10,6 @@ function FreeBoard(props) {
 
   const [freeBoardItem,setFreeBoardItem] = useState(null);
   const openFreeBoardModal = (data) => {
-    console.log(data);
     setFreeBoardItem(data);
     setShowFreeBoardModal(true);
   }
@@ -19,7 +18,6 @@ function FreeBoard(props) {
   }
 
   const openWriteBoardModal = () => {
-    console.log("실행");
     setShowWriteModal(true);
   }
   const closeWriteBoardModal = () => {

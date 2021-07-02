@@ -16,10 +16,10 @@ function TestList(props) {
   const [testPatientList, setTestPatientList] = useState([]);    //모든 검사 환자 리스트를 초기 상태로 선언
   const [testCodeList, setTestCodeList] = useState([]);   //검사 리스트 빈 배열로 초기 상태 선언
   const [selectedTestCodes, setSelectedTestCodes] = useState([]);   //예약이 필요한 검사 리스트를 담을 상태
-  const [patientId, setPatientId] = useState();
-  const [appointmentModalOpen, setAppointmentModalOpen] = useState(false);
+  const [patientId, setPatientId] = useState();   //선택한 환자 id
+  const [appointmentModalOpen, setAppointmentModalOpen] = useState(false); 
   const [reqTestModalOpen, setReqTestModalOpen] = useState(false);
-  const [isReq, setIsReq] = useState(false);
+  const [isReq, setIsReq] = useState(false);  //검사 요청이 되었는지 아닌지
   const ReqTest = () => {
     setIsReq(true);
   };
@@ -69,7 +69,7 @@ function TestList(props) {
   const showTestList = (testListId, patientId) => {
     const testList = staticTestCodeList.filter(testCode => testCode.test_list_id === testListId);
     setTestCodeList(testList);
-    setSelectedTestCodes([]);
+    setSelectedTestCodes([]);   //이전에 선택된 검사 리스트를 빈 배열로 세팅
     setPatientId(patientId);
   }
   const changeCheckedList = (event) => {
