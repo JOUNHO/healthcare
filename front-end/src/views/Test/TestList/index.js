@@ -40,7 +40,7 @@ function TestList(props){
   
   useEffect(()=>{
     // testList - // {test_list_id: "", patient_id: ""}
-    props.changeTestList(testList); // 선택된 환자 id를 바꿈
+    props.changeTestList(testList); 
   },[testList])
 
   return(
