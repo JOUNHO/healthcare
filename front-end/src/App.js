@@ -20,8 +20,8 @@ function App() {
     setChatShow(!chatShow);
   }
   useEffect(() => {
-    // const client = new Paho.Client("kosa3.iptime.org",50014 , "client-" + new Date().getTime());
-    const client = new Paho.Client("localhost",61614 , "client-" + new Date().getTime());
+    const client = new Paho.Client("kosa3.iptime.org",50014 , "client-" + new Date().getTime());
+    // const client = new Paho.Client("localhost",61614 , "client-" + new Date().getTime());
     dispatch(createSetClientAction(client));
     client.connect({onSuccess: () => {
       client.subscribe("/");

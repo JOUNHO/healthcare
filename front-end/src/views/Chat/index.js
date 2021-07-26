@@ -36,8 +36,8 @@ function Chat(props) {
   let client = useRef(null);
   const MqttBroker = () => {
     
-    // client = new Paho.Client("kosa3.iptime.org",50014, "chatclient-"+new Date().getTime());
-    client = new Paho.Client("localhost",61614 , "chatclient-" + new Date().getTime());
+    client = new Paho.Client("kosa3.iptime.org",50014, "chatclient-"+new Date().getTime());
+    // client = new Paho.Client("localhost",61614 , "chatclient-" + new Date().getTime());
     client.connect({onSuccess: () => {
       client.unsubscribe("/"+sessionStorage.getItem("hospital_code")+"/"+sessionStorage.getItem("staff_id"));
       client.subscribe("/"+sessionStorage.getItem("hospital_code")+"/"+sessionStorage.getItem("staff_id"));
