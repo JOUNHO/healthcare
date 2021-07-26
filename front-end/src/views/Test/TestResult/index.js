@@ -133,6 +133,7 @@ function TestResult(props){
                                            value={item.test_result_value || ""} 
                                            onChange={(event) => handleChange(event, index)}>
                                           </input>
+                                          <span className={style.resultHidden}> {item.test_result_value || ""} </span>
                                 </td>
                               </tr>
                             );
@@ -152,6 +153,7 @@ function TestResult(props){
                                            value={item.test_result_value || ""} 
                                            onChange={(event) => handleChange(event, index)}>
                                           </input>
+                                          <span className={style.resultHidden}> {item.test_result_value || ""} </span>
                                 </td>
                             </tr>
                             );

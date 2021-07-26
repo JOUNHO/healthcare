@@ -77,6 +77,10 @@
   font-weight: 600;
 }
 
+.resultHidden{
+  display:none
+}
+
 .exportxls{
   background-color: #427203;
   border-radius: 20px;
